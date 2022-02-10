@@ -13,3 +13,19 @@ body {
   background: #eee;
   padding: 20px;
 }
+
+.App .component_piano h2 {
+  margin: 0 0 10px 0;
+}
+
+.App .component_piano button.whiteKey {
+  height: 100px;
+  margin: 0 5px 0 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+/*# sourceMappingURL=App.css.map */

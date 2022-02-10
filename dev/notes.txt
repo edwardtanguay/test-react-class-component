@@ -1,0 +1,2 @@
+- .. make audiomanager play notes
+
