@@ -7,6 +7,8 @@ export const Piano = () => {
 	audioManager.noteOn();
 
 	return (
-		<div>piano</div>	
+		<div className="component_piano">
+			<h1>Piano</h1>
+		</div>
 	)
 }
