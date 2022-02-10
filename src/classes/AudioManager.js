@@ -5,6 +5,7 @@ export class AudioManager {
 	}
 
 	noteOn() {
-		console.log('note on');		
+		console.log('note on');	
+		// record note in recording manager
 	}
 }
