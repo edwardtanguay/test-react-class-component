@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { RiRecordCircleFill } from 'react-icons/ri';
 
 export const RecordingManager = ({ audioManager }) => {
 	const [isRecording, setIsRecording] = useState(false);
-	const [recordingArray, setRecordingArray] = useState(['F', 'E']);
+	const [recordingArray, setRecordingArray] = useState([]);
 
 	const handleRecordButton = () => {
 		setIsRecording(!isRecording);
@@ -19,15 +20,10 @@ export const RecordingManager = ({ audioManager }) => {
 
 	return (
 		<>
-			<div>Recording Manager</div>
-			<button onClick={handleRecordButton}>Record</button>
-			<div>{isRecording ? 'recording' : 'off'}</div>
-			<div><button onClick={() => recordNote('C#')}>Record Note</button></div>
-			{recordingArray.map((note, i) => {
-				return (
-					<div key={i}>{note}</div>
-				)
-			})}
+			<button className={`recordButton${isRecording ? ' recording' : ''}`} onClick={handleRecordButton}><RiRecordCircleFill className="icon" /><span>Record</span></button>
+			<div className="recordedNotes">
+				{recordingArray.map((note) => note).join(', ')}
+			</div>
 		</>
 	)
 }
