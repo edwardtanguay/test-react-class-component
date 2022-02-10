@@ -4,7 +4,6 @@ export const RecordingManager = ({audioManager}) => {
 	const [isRecording, setIsRecording] = useState(false);
 	const [recordingArray, setRecordingArray] = useState(['F', 'E']);
 
-	audioManager.noteOn('from recording manager');
 
 	const handleRecordButton = () => {
 		setIsRecording(!isRecording);
@@ -14,6 +13,8 @@ export const RecordingManager = ({audioManager}) => {
 		recordingArray.push(note);
 		setRecordingArray([...recordingArray]);
 	}
+
+	audioManager.injectRecordNote(recordNote);
 
 	return (
 		<>
