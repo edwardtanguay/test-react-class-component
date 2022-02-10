@@ -6,14 +6,14 @@ const audioManager = new AudioManager();
 export const Piano = () => {
 
 	const handlePianoKeyPress = () => {
-		audioManager.noteOn();
+		audioManager.noteOn('from piano');
 	}
 
 	return (
 		<div className="component_piano">
 			<h1>Piano</h1>
 			<button onClick={handlePianoKeyPress}>Piano Key</button>
-			<RecordingManager />
+			<RecordingManager audioManager={audioManager} />
 		</div>
 	)
 }

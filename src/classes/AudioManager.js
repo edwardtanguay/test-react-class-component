@@ -1,11 +1,10 @@
 export class AudioManager {
 	
-	constructor() {
-		this.musicFile = 'test.mp3';
-	}
+	// constructor() {
+	// }
 
-	noteOn() {
-		console.log('note on');	
+	noteOn(note) {
+		console.log('note play: ' + note);	
 		// record note in recording manager
 	}
 }
