@@ -39,14 +39,4 @@ export class AudioManager {
 		osc.start();
 		this.recordNote(note);
 	}
-
-	noteOffWithKeyPress(note) {
-		const osc = this.oscillators[note.toString()];
-		setTimeout(() => {
-			osc.stop();
-			osc.disconnect();
-		}, 200);
-
-		delete this.oscillators[note.toString()];
-	}
 }
